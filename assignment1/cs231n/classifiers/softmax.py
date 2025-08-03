@@ -89,7 +89,7 @@ def softmax_loss_vectorized(W, X, y, reg):
 
   loss = -1 * np.sum(np.log(correct_classes))
   loss /= num_train
-  loss += 2 * reg * np.sum(W * W)
+  loss += reg * np.sum(W * W)
 
   # X: N x D
   # probs: N x C
